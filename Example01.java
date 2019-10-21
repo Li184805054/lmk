@@ -1,20 +1,20 @@
-class Animal{
-     String name; 
-     void shout(){
-     System.out.println("动物发出叫声");
-     }
+public class Example01{
+    public static void main(String[] args){
+  Mythread1 st1= new Mythread1();
+  Mythread2 st2= new Mythread2();
+  st1.start();
+  st2.start();
 }
-class Dog extends Animal{
-      public void printName(){
-             System.out.println("name = " + name);
-      }
+}
+class Mythread1 extends Thread{
+   public void run(){
+     System.out.println("线程一");
+}
+}
+class Mythread2 extends Thread{
+   public void run(){
+     System.out.println("线程二");
+}
 }
 
-public class Example01{
-       public static void main(String[] args){
-           Dog dog = new Dog();
-           dog.name = "沙皮狗";
-           dog.printName();
-           dog.shout();
-       }
-}
+ 
