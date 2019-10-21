@@ -1,17 +1,19 @@
-class Animal{
-     void shout(){
-     System.out.println("动物发出叫声");
-     }
+public class Example02{
+     public static void main(String[] args){
+     Mythread mythread=new Mythread();
+     Thread thread=new Thread(mythread);
+     thread.start();
+  for(int i=1; i<=100; i++){
+  System.out.println("main");
 }
-class Dog extends Animal{
-      void shout(){
-             System.out.println("汪汪……");
-      }
+}
+}
+class Mythread implements Runnable{
+   public void run(){
+      for(int i=1; i<=50; i++){
+     System.out.println("new");
+}
+}
 }
 
-public class Example02{
-       public static void main(String[] args){
-           Dog dog = new Dog();
-           dog.shout();
-       }
-}
+      
